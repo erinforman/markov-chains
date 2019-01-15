@@ -11,8 +11,7 @@ def open_and_read_file(file_path):
     """
 
     # your code goes here
-
-    return "Contents of your file as one long string"
+    return open(file_path).read()
 
 
 def make_chains(text_string):
@@ -41,10 +40,22 @@ def make_chains(text_string):
     """
 
     chains = {}
+    n=0
 
+    words = text_string.split()
+
+    for word in words:
+
+        if words[n] == words[-2]:
+            return chains
+
+        pair_word = (words[n], words[n+1])
+
+
+        chains[pair_word] = chains.get(pair_word,[]) + [words[n+2]]
+
+        n+=1
     # your code goes here
-
-    return chains
 
 
 def make_text(chains):
@@ -59,7 +70,8 @@ def make_text(chains):
 
 input_path = "green-eggs.txt"
 
-# Open the file and turn it into one long string
+# Open the file and turn it into one long st
+#ring
 input_text = open_and_read_file(input_path)
 
 # Get a Markov chain
