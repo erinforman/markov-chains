@@ -47,16 +47,15 @@ def make_chains(text_string):
     for word in words:
 
         if words[n] == words[-2]:
-            return chains
+            break
 
         pair_word = (words[n], words[n+1])
-
 
         chains[pair_word] = chains.get(pair_word,[]) + [words[n+2]]
 
         n+=1
     # your code goes here
-
+    return chains
 
 def make_text(chains):
     """Return text from chains."""
@@ -64,11 +63,13 @@ def make_text(chains):
     words = []
 
     # your code goes here
-
+    for word_tuple, value in chains.items():
+        words.append(choice(value))
+        
     return " ".join(words)
 
 
-input_path = "green-eggs.txt"
+input_path = "gettysburg.txt"
 
 # Open the file and turn it into one long st
 #ring
