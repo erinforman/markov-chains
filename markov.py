@@ -60,16 +60,22 @@ def make_chains(text_string):
 def make_text(chains):
     """Return text from chains."""
 
-    words = ["dog"]
+    words = []
 
     # your code goes here
     pair = choice(list(chains.keys()))
-    
+    # new_pair = ()
+    #print(pair, "initial pair")
+
     while pair in chains:
         value = chains[pair]
-        words.append(choice(value))
-        pair = (pair[1], value)
-        
+        #print(value, "value")
+        second_word = choice(value)
+        words.append(second_word)
+        #print(words, "words")
+        pair = (pair[1], second_word)
+        #print(pair)
+
     return " ".join(words)
 
 
