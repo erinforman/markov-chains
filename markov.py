@@ -1,10 +1,6 @@
 """Generate Markov text from text files."""
 
 import sys
-<<<<<<< HEAD
-=======
-
->>>>>>> 02c91a5c08de88c3be4544c14138935e7ba4a0ce
 file_path = sys.argv[1]
 from random import choice
 
@@ -62,7 +58,6 @@ file_path = sys.argv[1] + sys.argv[2]keys())
 
     i = 0
 
-<<<<<<< HEAD
     for i in range(0,len(words)-1): 
         '''for every index in words'''
 
@@ -82,29 +77,7 @@ file_path = sys.argv[1] + sys.argv[2]keys())
         create an empty list as the value. Then add the next sequential word in words
         that comes after the last string in the key.'''
         i += 1
-    print(chains)
-=======
-    while len(n_list) < n_gram:
-        n_list.append("word_" + str(i))
-        i+1
 
-   #print(n_list)
-    while i in range(i,i+1):#range(0+i,i+n_gram): 
-        if i == len(words):
-            break
-        print(i,range(i,i+1), n_gram, "test")
-        n_list = words[i:len(n_list)]
-        print(n_list)
-        if len(n_list) == n_gram:
-            print("nlist",n_list)
-            n_tuple = tuple(n_list)
-
-            chains[n_tuple] = chains.get(n_tuple,[]) + [words[i+n_gram]]
-        i += 1
-
-    #print("chains",chains)
-
->>>>>>> 02c91a5c08de88c3be4544c14138935e7ba4a0ce
     return chains
 
 def make_text(chains):
@@ -112,22 +85,12 @@ def make_text(chains):
 
     words = []
 
-<<<<<<< HEAD
     pair = choice(list(chains.keys()))
-    print("THIS IS THE PAIR",pair)
-=======
-    #print("words", words)
-    pair = choice(list(chains.keys()))
-
-    #print("pair", pair)
-
->>>>>>> 02c91a5c08de88c3be4544c14138935e7ba4a0ce
 
     while pair in chains:
 
         value = chains[pair]
 
-<<<<<<< HEAD
         second_word = choice(value)
 
         words.append(second_word)
@@ -142,26 +105,6 @@ def make_text(chains):
 # Open the file and turn it into one long st
 #ring
 input_text = open_and_read_file(file_path)
-=======
-        #print("value", value)
-
-        second_word = choice(value)
-        #print("second word", second_word)
-        words.append(second_word)
-        #print("words",words)
-        pair = (pair[1], second_word)
-        #print("pair",pair)
-
-
-    return " ".join(words)
-
-
-input_path = "green-eggs.txt"
-
-# Open the file and turn it into one long st
-#ring
-input_text = open_and_read_file(input_path)
->>>>>>> 02c91a5c08de88c3be4544c14138935e7ba4a0ce
 
 # Get a Markov chain
 chains = make_chains(input_text)
