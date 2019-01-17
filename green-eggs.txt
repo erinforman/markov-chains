@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 I AM SAM I AM SAM SAM I AM
 
 THAT SAM-I-AM! THAT SAM-I-AM! I DO NOT LIKE THAT SAM-I-AM!
@@ -131,3 +132,11 @@ AND I WILL EAT THEM HERE AND THERE
 SAY! I WILL EAT THEM ANYWHERE!
 I DO SO LIKE GREEN EGGS AND HAM!
 THANK YOU! THANK YOU, SAM I AM
+=======
+Would you could you in a house?
+Would you could you with a mouse?
+Would you could you in a box?
+Would you could you with a fox?
+Would you like green eggs and ham?
+Would you like them, Sam I am?
+>>>>>>> 02c91a5c08de88c3be4544c14138935e7ba4a0ce
